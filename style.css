@@ -22,6 +22,7 @@ body {
     max-width: 100svw;
     height: 100svh;
     font-family: 'Source Sans 3', sans-serif;
+    line-height: 1.5;
 }
 
 header {
@@ -56,17 +57,21 @@ h1 {
     color: black;
     display: inline-block;
     padding: 30px 0px;
-    font-size: 18px;
+    font-size: 1.1rem;
     font-weight: 600;
     color: var(--dark-grey);
     transition: 0.2s ease-in-out;
+}
+
+i.menu-bars {
+    display: none;
 }
 
 header nav ul {
     display: flex;
     align-items: center;
     gap: 50px;
-    font-size: 16px;
+    font-size: 1.05rem;
 }
 
 header nav ul li a {
@@ -98,7 +103,8 @@ header h1:hover {
 }
 
 .intro h2 {
-    font-size: 52px;
+    font-size: 3.05rem;
+    text-align: center;
     font-weight: 800;
     color: black;
     letter-spacing: 1px;
@@ -110,15 +116,15 @@ header h1:hover {
     text-align: center;
     font-weight: 300;
     color: var(--dark-grey);
-    font-size: 24px;
+    font-size: 1.3rem;
 }
 
 .intro button {
     border: none;
     color: white;
-    font-size: 16px;
+    font-size: 1rem;
     letter-spacing: 1px;
-    font-weight: 600;
+    font-weight: 700;
     background-color: var(--primary);
     border-radius: 5px;
     padding: 20px 70px;
@@ -131,7 +137,8 @@ header h1:hover {
 
 .about-me {
     width: 100%;
-    height: 105svh;
+    height: auto;
+    padding: 100px 0px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -141,7 +148,6 @@ header h1:hover {
 }
 
 .about-me .about-heading {
-    margin-top: 120px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -180,6 +186,14 @@ header h1:hover {
     gap: 60px;
 }
 
+.about-me .info .details {
+    width: 40%;
+}
+
+.about-me .info .skills {
+    width: 40%;
+}
+
 .about-me .info h2 {
     color: black;
     font-size: 25px;
@@ -212,13 +226,6 @@ header h1:hover {
     transform: translateY(-3px);
 }
 
-.about-me .info .details {
-    width: 40%;
-}
-
-.about-me .info .skills {
-    width: 40%;
-}
 
 .about-me .info .skills .skill-items {
     display: flex;
@@ -239,7 +246,7 @@ header h1:hover {
 .projects {
     width: 100%;
     height: auto;
-    padding: 80px 0;
+    padding: 100px 0;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -250,7 +257,6 @@ header h1:hover {
 
 .projects-heading {
     width: 100%;
-    margin-top: 110px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -279,12 +285,12 @@ header h1:hover {
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    /* gap: 40px; */
 }
 
 .project-items .project-item {
     width: 70%;
-    height: 60svh;
+    height: auto;
+    padding: 60px 0px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -378,7 +384,7 @@ header h1:hover {
 }
 
 .contact .form-body {
-    width: 55%;
+    width: 75%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
@@ -546,4 +552,142 @@ footer p {
 
 .space {
     height: 20px;
+}
+
+@media (max-width: 1024px) {
+    .about-me .info {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .about-me .info .details {
+        width: 45%;
+    }
+
+    .about-me .info .skills {
+        width: 45%;
+    }
+
+    .project-items .project-item {
+        width: 90%;
+    }
+
+    .project-item img {
+        width: 50%;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    footer {
+        padding: 30px 90px;
+    }
+
+    .f-info {
+        margin-bottom: 40px;
+    }
+
+    footer hr {
+        border: none;
+        height: 1px;
+        background-color: var(--light-grey);
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 75px;
+        padding-left: 20px;
+        padding-right: 35px;
+    }
+
+    header img {
+        width: 45px;
+        height: 45px;
+    }
+
+    h1 {
+        font-size: .9rem;
+    }
+
+    header nav ul {
+        gap: 25px;
+        font-size: .8rem;
+    }
+
+    .intro h2 {
+        width: 70%;
+        font-size: 2.5rem;
+
+    }
+
+    .intro p {
+        width: 85%;
+    }
+
+    .about-me .about-heading p {
+        width: 95%;
+    }
+
+    .about-me .info {
+        flex-direction: column;
+    }
+
+    .about-me .info .details {
+        width: 90%;
+    }
+
+    .about-me .info .skills {
+        width: 90%;
+    }
+
+    .project-items .project-item {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+    }
+
+    .project-item img {
+        width: 95%;
+    }
+
+    .project-item .details {
+        width: 80%;
+        align-items: center;
+    }
+
+    .project-item .details p {
+        text-align: center;
+    }
+
+    .contact .contact-heading p {
+        width: 90%;
+    }
+
+    .contact .form-body {
+        width: 90%;
+    }
+
+    .f-info {
+        width: 60%;
+    }
+}
+
+@media (max-width: 425px) {
+    header {
+        padding-right: 15px;
+    }
+
+    i.menu-bars {
+        display: inline-block;
+        font-size: 1.5rem;
+    }
+
+    header nav {
+        display: none;
+    }
+
 }
